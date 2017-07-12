@@ -1,0 +1,5 @@
+rayu_ticket:
+    resource: "@RayuTicketBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
