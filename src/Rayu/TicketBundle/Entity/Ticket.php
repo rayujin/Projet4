@@ -84,6 +84,12 @@ class Ticket
      * @ORM\Column(name="mail", type="string", length=255)
      */
     private $mail;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Rayu\TicketBundle\Entity\Commande")
+     * @ORM\JoinColumn(name="commande_id", referencedColumnName="id", nullable=false)
+     */
+    private $commande;
   
     // FONCTIONS //
 
@@ -320,5 +326,29 @@ class Ticket
     public function getMail()
     {
         return $this->mail;
+    }
+
+    /**
+     * Set commande
+     *
+     * @param \Rayu\TicketBundle\Entity\Commande $commande
+     *
+     * @return Ticket
+     */
+    public function setCommande(\Rayu\TicketBundle\Entity\Commande $commande)
+    {
+        $this->commande = $commande;
+
+        return $this;
+    }
+
+    /**
+     * Get commande
+     *
+     * @return \Rayu\TicketBundle\Entity\Commande
+     */
+    public function getCommande()
+    {
+        return $this->commande;
     }
 }
