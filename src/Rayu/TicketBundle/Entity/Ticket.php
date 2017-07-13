@@ -12,6 +12,8 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Ticket
 {
+    // ATTRIBUTS //
+
     /**
      * @var int
      *
@@ -40,28 +42,28 @@ class Ticket
      *
      * @ORM\Column(name="journee", type="boolean")
      */
-    private $journee;
+    private $journee = NULL;
 
     /**
      * @var bool
      *
      * @ORM\Column(name="demi_journee", type="boolean")
      */
-    private $demiJournee;
+    private $demiJournee = NULL;
 
     /**
      * @var int
      *
      * @ORM\Column(name="tarif", type="integer")
      */
-    private $tarif;
+    private $tarif = NULL;
 
     /**
      * @var bool
      *
      * @ORM\Column(name="demi_tarif", type="boolean")
      */
-    private $demiTarif;
+    private $demiTarif = NULL;
 
     /**
      * @var \DateTime
@@ -83,6 +85,16 @@ class Ticket
      */
     private $mail;
   
+    // FONCTIONS //
+
+
+
+
+
+
+
+
+    // GETTER ET SETTER //
 
     /**
      * Get id

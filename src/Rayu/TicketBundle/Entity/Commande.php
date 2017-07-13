@@ -26,35 +26,35 @@ class Commande
      *
      * @ORM\Column(name="nbr_ticket_normal", type="integer")
      */
-    private $nbrTicketNormal;
+    private $nbrTicketNormal = NULL;
 
     /**
      * @var int
      *
      * @ORM\Column(name="nbr_ticket_enfant", type="integer")
      */
-    private $nbrTicketEnfant;
+    private $nbrTicketEnfant = NULL;
 
     /**
      * @var int
      *
      * @ORM\Column(name="nbr_ticket_senior", type="integer")
      */
-    private $nbrTicketSenior;
+    private $nbrTicketSenior = NULL;
 
     /**
      * @var int
      *
      * @ORM\Column(name="nbr_ticket_demi_tarif", type="integer")
      */
-    private $nbrTicketDemiTarif;
+    private $nbrTicketDemiTarif = NULL;
 
     /**
      * @var int
      *
      * @ORM\Column(name="nbr_ticket_demi_journee", type="integer")
      */
-    private $nbrTicketDemiJournee;
+    private $nbrTicketDemiJournee = NULL;
 
     /**
      * @var int
