@@ -79,12 +79,16 @@ class Ticket
      */
     private $mail;
 
+    private $dateDeReservation;
+
     /**
      * @ORM\ManyToOne(targetEntity="Rayu\TicketBundle\Entity\Commande")
      * @ORM\JoinColumn(name="commande_id", referencedColumnName="id", nullable=false)
      */
     private $commande;
   
+
+
     // FUNCTIONS //
 
 
