@@ -72,12 +72,6 @@ class Ticket
      */
     private $dateDeNaissance;
 
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="date_de_reservation", type="date")
-     */
-    private $dateDeReservation;
 
     /**
      *@var string
@@ -91,7 +85,7 @@ class Ticket
      */
     private $commande;
   
-    // FONCTIONS //
+    // FUNCTIONS //
 
 
 

@@ -21,40 +21,6 @@ class Commande
      */
     private $id;
 
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="nbr_ticket_normal", type="integer")
-     */
-    private $nbrTicketNormal = NULL;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="nbr_ticket_enfant", type="integer")
-     */
-    private $nbrTicketEnfant = NULL;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="nbr_ticket_senior", type="integer")
-     */
-    private $nbrTicketSenior = NULL;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="nbr_ticket_demi_tarif", type="integer")
-     */
-    private $nbrTicketDemiTarif = NULL;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="nbr_ticket_demi_journee", type="integer")
-     */
-    private $nbrTicketDemiJournee = NULL;
 
     /**
      * @var int
@@ -77,6 +43,33 @@ class Commande
      */
     private $refTransaction;
 
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date_de_reservation", type="date")
+     */
+    private $dateDeReservation;
+
+
+
+    //FUNCTIONS //
+
+    public function nbrDeTicket()
+    {
+        return $nbrDeTickets = ['nbrDeTicketNormal' => $nbrDeTicketNormal , 
+                               'nbrDeTicketEnfant' => $nbrDeTicketEnfant ,
+                               'nbrDeTicketSenior' => $nbrDeTicketSenior ,
+                               'nbrDeTicketDemiTarif' => $nbrDeTicketDemiTarif ,
+                               'nbrDeTicketDemiJournee' => $nbrDeTicketDemiJournee];
+    }
+
+
+
+
+
+
+
+    //GETTERS AND SETTERS //
 
     /**
      * Get id
@@ -86,126 +79,6 @@ class Commande
     public function getId()
     {
         return $this->id;
-    }
-
-    /**
-     * Set nbrTicketNormal
-     *
-     * @param integer $nbrTicketNormal
-     *
-     * @return Commande
-     */
-    public function setNbrTicketNormal($nbrTicketNormal)
-    {
-        $this->nbrTicketNormal = $nbrTicketNormal;
-
-        return $this;
-    }
-
-    /**
-     * Get nbrTicketNormal
-     *
-     * @return int
-     */
-    public function getNbrTicketNormal()
-    {
-        return $this->nbrTicketNormal;
-    }
-
-    /**
-     * Set nbrTicketEnfant
-     *
-     * @param integer $nbrTicketEnfant
-     *
-     * @return Commande
-     */
-    public function setNbrTicketEnfant($nbrTicketEnfant)
-    {
-        $this->nbrTicketEnfant = $nbrTicketEnfant;
-
-        return $this;
-    }
-
-    /**
-     * Get nbrTicketEnfant
-     *
-     * @return int
-     */
-    public function getNbrTicketEnfant()
-    {
-        return $this->nbrTicketEnfant;
-    }
-
-    /**
-     * Set nbrTicketSenior
-     *
-     * @param integer $nbrTicketSenior
-     *
-     * @return Commande
-     */
-    public function setNbrTicketSenior($nbrTicketSenior)
-    {
-        $this->nbrTicketSenior = $nbrTicketSenior;
-
-        return $this;
-    }
-
-    /**
-     * Get nbrTicketSenior
-     *
-     * @return int
-     */
-    public function getNbrTicketSenior()
-    {
-        return $this->nbrTicketSenior;
-    }
-
-    /**
-     * Set nbrTicketDemiTarif
-     *
-     * @param integer $nbrTicketDemiTarif
-     *
-     * @return Commande
-     */
-    public function setNbrTicketDemiTarif($nbrTicketDemiTarif)
-    {
-        $this->nbrTicketDemiTarif = $nbrTicketDemiTarif;
-
-        return $this;
-    }
-
-    /**
-     * Get nbrTicketDemiTarif
-     *
-     * @return int
-     */
-    public function getNbrTicketDemiTarif()
-    {
-        return $this->nbrTicketDemiTarif;
-    }
-
-    /**
-     * Set nbrTicketDemiJournee
-     *
-     * @param integer $nbrTicketDemiJournee
-     *
-     * @return Commande
-     */
-    public function setNbrTicketDemiJournee($nbrTicketDemiJournee)
-    {
-        $this->nbrTicketDemiJournee = $nbrTicketDemiJournee;
-
-        return $this;
-    }
-
-    /**
-     * Get nbrTicketDemiJournee
-     *
-     * @return int
-     */
-    public function getNbrTicketDemiJournee()
-    {
-        return $this->nbrTicketDemiJournee;
     }
 
     /**
@@ -279,5 +152,28 @@ class Commande
     {
         return $this->refTransaction;
     }
-}
 
+    /**
+     * Set dateDeReservation
+     *
+     * @param \DateTime $dateDeReservation
+     *
+     * @return Commande
+     */
+    public function setDateDeReservation($dateDeReservation)
+    {
+        $this->dateDeReservation = $dateDeReservation;
+
+        return $this;
+    }
+
+    /**
+     * Get dateDeReservation
+     *
+     * @return \DateTime
+     */
+    public function getDateDeReservation()
+    {
+        return $this->dateDeReservation;
+    }
+}
