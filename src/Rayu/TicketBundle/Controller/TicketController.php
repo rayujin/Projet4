@@ -17,7 +17,7 @@ use Symfony\Component\HttpFoundation\Request;
 class TicketController extends Controller
 {
 	/**
-	 *@Route("/add") 
+	 *@Route("/addTicket") 
 	*/
 	public function addTicket(Request $request)
 	{
@@ -44,9 +44,6 @@ class TicketController extends Controller
 		//à partir du formBuilder on genere le formulaire
 		$form = $formBuilder->getForm();
 
-		//on passe la mathode createView() du formulaire à la vue
-		return $this->render('RayuTicketBundle:Ticket:add.html.twig', array('form' => $form->createView(),));
-
 		//Si la requête est en POST
 		if($request->isMethod('POST'))
 		{
@@ -67,11 +64,9 @@ class TicketController extends Controller
 			}
 
 		}
-		else
-		{
-			echo "erreur !";
-		}
 
+		//on passe la mathode createView() du formulaire à la vue
+		return $this->render('RayuTicketBundle:Ticket:add.html.twig', array('form' => $form->createView(),));
 
 
 

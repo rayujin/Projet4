@@ -56,7 +56,7 @@ class Ticket
      *
      * @ORM\Column(name="tarif", type="integer")
      */
-    private $tarif = NULL;
+    private $tarif = 10;
 
     /**
      * @var bool
@@ -81,11 +81,11 @@ class Ticket
 
     private $dateDeReservation;
 
-    /**
-     * @ORM\ManyToOne(targetEntity="Rayu\TicketBundle\Entity\Commande")
-     * @ORM\JoinColumn(name="commande_id", referencedColumnName="id", nullable=false)
-     */
-    private $commande;
+    //**
+    // * @ORM\ManyToOne(targetEntity="Rayu\TicketBundle\Entity\Commande")
+    // * @ORM\JoinColumn(name="commande_id", referencedColumnName="id", nullable=false)
+    //
+    private $commande_id = NULL;
   
 
 
